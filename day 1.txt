@@ -195,6 +195,396 @@ int main (){
  //          printf("%f", fmodf(a,b));
  //          return 0;
 
+/* unary increment
+under unary increment we ahve 2 categories such as pre incremnet and post increment
+pre incremnet: here we are going to increase the value first later we print or operate on the same operand ex: ++a
+post increment: here we are going to print or operate first later we increase the value by one. ex: a++ 
+example: 
+
+a = 5 
+find the value of z.
+z = a+++++a---a-a++
+z = (a++)+(++a)-(--a)-(a++)
+  = 5+7-6-6
+  = 0
+
+x = 7
+find the value of a
+a = x+++--x+++x-x--+x++
+a = 21
+
+Relational operators will always be output in the format of true or false which is indicated with the help of integer numbers in c programming 
+
+Question 
+Write a program to demonstrate relational operators with the help of 2 integer numbers 
+#include<stdio.h>
+int main(){
+    int a = 5, b = 10;
+    printf("a<b: %d\n", a<b);
+    printf("a>b: %d\n", a>b);
+    printf("a<=b: %d\n", a<=b);
+    printf("a>=b: %d\n", a>=b);
+    printf("a==b: %d\n", a==b);
+    return 0;
+}
+
+Problem: Write a program where a user enters their age as an integer. 
+Use a relational operator (>=) to check if they are eligible to vote (age 18 or older). Print a message saying "Eligible" or "Not Eligible". 
+
+#include<stdio.h>
+int main(){
+    int age = 0;
+    printf("Enter your age: ", age);
+    scanf("%d",&age);
+    printf("ELIGIBility to vote: %d", age>=18 );
+    return 0;
+}
+
+___Write a program to demonstrate the workflow of assignment operators 
+#include<stdio.h>
+int main(){
+   int a = 6;
+   a+=1;
+   printf("%d\n",a);
+   a-=2;
+   printf("%d\n",a);
+   a*=3;
+   printf("%d\n",a);
+   a/=4;
+   printf("%d\n",a);
+   a%=2;
+   printf("%d\n",a);
+    return 0;
+}
+
+LOGICAL OPERATORS
+note : In c programming we have 3 types og logical operators. 
+And - represented as  '&&'
+or - represented as '||'
+Not - represented as '^'
+
+BITWISE OPERATORS
+
+ /* write a program to print the integer if it is positive. 
+     #include<stdio.h>
+     int main(){
+     int a = 0;
+     printf("Enter a number:  ");
+     scanf("%d",&a);
+     if(a>0){
+        printf(" Entered number is Positive ");
+     }
+     return 0;
+     }
+
+
+
+"if , executes first block only when the condition is true 
+else, executes second block"
+
+     Write a program to print a given number if it is even
+     #include<stdio.h>
+     int main(){
+     int a = 0;
+     printf("Enter a number:  ");
+     scanf("%d",&a);
+     if(a%2==0){
+        printf("%d is Even ",a);
+     }
+     else{;
+     printf(" %d is Odd ",a );
+     }
+     return 0;
+     } 
+
+     Question 2: Shopping Discount (Compound Subtraction)Write a C program where the user enters the total bill amount. 
+If the bill is over 500, apply a flat discount of 50 using the compound subtraction assignment operator (-=). Print the final payable amount.
+
+
+#include<stdio.h>
+     int main(){
+     float Total_bill_amount = 0;
+     printf("Enter Total_bill_amount:  ");
+     scanf("%f",&Total_bill_amount);
+     if(Total_bill_amount>=500){
+        printf("Discounted!!! Final_Bill_amount: ",Total_bill_amount-=50);
+     }
+     else{
+     printf(" Discount only for shopping worth greater than 500rs\n Total payable amount: %f",Total_bill_amount);
+     }
+     return 0;
+     } 
+   
+
+#include<stdio.h>
+     int main(){
+        float temp = 0;
+        printf("Temperature(in celcius):  ");
+        scanf("%f",&temp);
+        if(temp>=60 && temp<=90){
+            printf("It is summer.\nSquirrels will play");
+        }
+        else{
+            if (temp>90){
+            printf("It is summer.\nSquirrels will not play");
+            }
+            else{
+                printf("Not summer.");
+            }
+        }
+        
+        return 0;
+     }
+
+
+
+write a program to check the greatest among 2 given integer numbers where num1 = 70 and num2 = 12
+*/
+
+#include<stdio.h>
+int main(){
+    int num1 = 70;
+    int num2 = 12;
+    if(num1>num2){
+        printf("%d is greater", num1);
+    }
+    else{
+        printf("%d is greater", num2);
+    }
+    return 0;
+}
+
+if...elif..else
+when we have more than 2 conditions or branches to check at that time we eill use if elif statement.
+flow of execution is top down approach. */
+
+
+
+ /* write a program to print the integer if it is positive. 
+     #include<stdio.h>
+     int main(){
+     int a = 0;
+     printf("Enter a number:  ");
+     scanf("%d",&a);
+     if(a>0){
+        printf(" Entered number is Positive ");
+     }
+     return 0;
+     }
+
+
+
+"if , executes first block only when the condition is true 
+else, executes second block"
+
+     Write a program to print a given number if it is even
+     #include<stdio.h>
+     int main(){
+     int a = 0;
+     printf("Enter a number:  ");
+     scanf("%d",&a);
+     if(a%2==0){
+        printf("%d is Even ",a);
+     }
+     else{;
+     printf(" %d is Odd ",a );
+     }
+     return 0;
+     } 
+
+     Question 2: Shopping Discount (Compound Subtraction)Write a C program where the user enters the total bill amount. 
+If the bill is over 500, apply a flat discount of 50 using the compound subtraction assignment operator (-=). Print the final payable amount.
+
+
+#include<stdio.h>
+     int main(){
+     float Total_bill_amount = 0;
+     printf("Enter Total_bill_amount:  ");
+     scanf("%f",&Total_bill_amount);
+     if(Total_bill_amount>=500){
+        printf("Discounted!!! Final_Bill_amount: ",Total_bill_amount-=50);
+     }
+     else{
+     printf(" Discount only for shopping worth greater than 500rs\n Total payable amount: %f",Total_bill_amount);
+     }
+     return 0;
+     } 
+   
+
+#include<stdio.h>
+     int main(){
+        float temp = 0;
+        printf("Temperature(in celcius):  ");
+        scanf("%f",&temp);
+        if(temp>=60 && temp<=90){
+            printf("It is summer.\nSquirrels will play");
+        }
+        else{
+            if (temp>90){
+            printf("It is summer.\nSquirrels will not play");
+            }
+            else{
+                printf("Not summer.");
+            }
+        }
+        
+        return 0;
+     }
+
+
+
+write a program to check the greatest among 2 given integer numbers where num1 = 70 and num2 = 12
+
+
+#include<stdio.h>
+int main(){
+    int num1 = 70;
+    int num2 = 12;
+    if(num1>num2){
+        printf("%d is greater", num1);
+    }
+    else{
+        printf("%d is greater", num2);
+    }
+    return 0;
+}
+
+if...elif..else
+when we have more than 2 conditions or branches to check at that time we eill use if elif statement.
+flow of execution is top down approach. 
+
+1.check if a number is positive , negative or zero 
+
+#include<stdio.h>
+     int main(){
+     int a = 0;
+     printf("Enter a number:  ");
+     scanf("%d",&a);
+     if(a>0){
+        printf(" Entered number is Positive ");
+     }
+     else if(a==0);{
+        printf("Entered number is 0 ");
+     }
+     else{
+        printf("Entered number is negative");
+     }
+     return 0;
+     }
+
+                                                                                                                               
+//2. Find the largest of 3 numbers
+
+#include<stdio.h>
+     int main(){
+     int a = 0;
+     int b = 0 ;
+     int c = 0;
+     printf("Enter a:%d",&a);
+     printf("Enter b:%d",&b);
+     printf("Enter c:%d",&c);
+     scanf("%d%d%d",a,b,c);
+     if (a>b && a>c){
+        printf("a(%d) is largest among 3 numbers",a);
+     }
+     else if(b>a && b>c){
+        printf("b(%d) is largest among 3 numbers",b);
+     }else{
+        printf("c(%d) is largest among 3 numbers",c);
+     }
+    return 0;
+     }
+    
+
+
+
+
+//3. Check whether a person is child, teenager, adult, senior citizen
+#include<stdio.h>
+     int main(){
+     int age = 0;
+     printf("Enter the age: %d",age);
+     scanf("%d",&age);
+     if(age<18){
+        printf("Child");
+     }
+    else if(age<21){
+        printf("Teenager");
+    }
+    else if(age>=21 && age<75){
+        printf("Adult");
+    }
+    else{
+        printf("Senior citizen");
+    }
+    return 0;
+     }
+
+*/
+
+//4. create a simple calculator using +,-,*,/ based on user choice.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
