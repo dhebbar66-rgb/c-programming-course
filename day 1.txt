@@ -159,6 +159,41 @@ int main (){
 //     return 0;
 // }
 
+/ we get 0.00 irrespective of given value
+// #include<stdio.h>
+// int main(){
+// int a = 8;
+// int b = 4;
+// printf(" %f and %f\n",a/b);
+// return 0;
+// }
+
+// we get correct when either is float as implicit conversion takes place
+// #include<stdio.h>
+// int main(){
+// int a = 8;
+// float b = 4.0;
+// printf(" %f\n",a/b);
+// return 0;
+// }
+
+
+//correct one
+// #include<stdio.h>
+// int main(){
+// int a = 10;
+// int b = 4;
+// float result = (float)a/b;
+// printf("Float result: %f\n",result);
+// return 0;
+// }
+
+ // Note :  we cannot apply 'mod' operator to floating point values, bcz in c programming mod operator is also known as integer division which means it is going to work with only integer values
+ // if we want to apply mod operation to any of the floaing point value , either we can use f mod function , f modf function
+ // example: float a = 5,5
+ //          float b = 2.6
+ //          printf("%f", fmodf(a,b));
+ //          return 0;
 
 
 
