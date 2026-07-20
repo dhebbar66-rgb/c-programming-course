@@ -1,0 +1,165 @@
+//Hello World  //documentation
+/* Hello
+World
+*/
+// #include<stdio.h>  //preprocessor
+// int main(){    //main function
+//     printf("Hello World!\n");
+//     printf("Dhatri Hebbar!\n");
+//     printf("BTech\t");
+//     printf("Biotechnology and Bioengineering\n");
+//     return 0;
+// }
+//write a program to read 2 constant variable values and display some of 2 numbers
+//note : a is 10 and b is 20
+ #include<stdio.h>  
+  int main(){    
+      int a = 10;
+      int b = 20;
+      printf ("%d",(a+b));
+      return 0;
+  }
+//write a program to read 2 constant variable values and display addition subtraction multiplication division of 2 numbers
+//note : a is 10 and b is 20
+//  #include<stdio.h>  
+//   int main(){    
+//       int a = 10;
+//       int b = 20;
+//       printf ("%d\n",(a+b));
+//       printf ("%d\n",(a-b));
+//       printf ("%d\n",(a*b));
+//       printf ("%f",(a/b));
+//       return 0;
+//   }
+ // write a progam to calculate the area of square where side value is floating point number.
+  #include<stdio.h>  
+  int main(){   
+      float side_of_square = 6.66;
+      printf ("%f",(side_of_square*side_of_square));
+      return 0;
+     }
+
+
+#include<stdio.h>
+int main(){
+    int num1;
+    printf("%d",num1);
+    return 0;
+}
+returns some random number which is actually an error, hence always specify value for variable
+
+//taking inputs
+#include<stdio.h>
+int main(){
+    int num1=0;
+    printf("Enter a value:\n");
+    scanf("%d",&num1);
+    printf("Entered value is : %d\n",num1);
+    return 0;
+}
+
+
+ #include<stdio.h>
+// int main(){
+//     char name = 0;
+//     printf("Enter your name: \n");
+//     scanf("%c",&name);
+//     printf("your name is: %c\n",name);
+//     return 0;
+// }
+
+//sum of 2 input numbers
+// #include<stdio.h>
+// int main(){
+//     int num1=0;
+//     int num2 = 0;
+//     printf("Enter a value:\n");
+//     scanf("%d",&num1);
+//     scanf("%d",&num2);
+//     printf("sum of values is : %d\n",(num1+num2));
+//     return 0;
+// }
+
+//making it short
+
+// #include<stdio.h>
+// int main(){
+//     int num1=0;
+//     int num2 = 0;
+//     printf("Enter a value:\n");
+//     scanf ("%d%d",&num1,&num2);
+//     printf("sum of 2 numbers: %d\n",num1+num2);
+//     return 0;
+// }
+
+
+//write a program to read input from user, where a is an int, b is floating point number, c is character and d is double .
+
+#include<stdio.h>
+int main(){
+    int a = 0;
+    float b = 0;
+    char c = 0;
+    double d = 0;
+    printf("Enter a value: \n");
+    scanf ("%d%f%ld %c",&a,&b,&c,&d);
+    printf("Entered values of a,b,c,d are :%d\n%f\n%ld\n %c\n" ,a,b,c,d);
+    return 0;
+}
+
+//Find area of circle for given radius
+#include<stdio.h>
+int main (){
+    float pi = 3.14;
+    float radius = 0;
+    printf("Enter a value: \n");
+    scanf("%f%f\n",&radius,&pi);
+    print("Area of the circle of given radius is = %f\n", pi *radius*radius)
+    return 0;
+}
+
+
+// // Write a program to swap 2 numbers a and b with the help of third variable c
+// #include<stdio.h>
+// int main(){
+//     int a = 10;
+//     int b = 20;
+//     printf("Two given numbers are: %d and %d\n",a,b);
+//     int c = a;
+//      a = b;
+//      b = c;
+//     printf("Swapped numbers are: %d and %d",a,b);
+//     return 0;
+// }
+  
+
+//Swapping characters
+// #include<stdio.h>
+// int main(){
+//     char a = 'D';
+//     char b = 'P';
+//     printf("Two given characters are: %c and %c\n",a,b);
+//     char c = a;
+//      a = b;
+//      b = c;
+//     printf("Swapped characters are: %c and %c",a,b);
+//     return 0;
+// }
+
+// Write a program to swap 2 numbers without using third variable (reinitialization)
+// #include<stdio.h>
+// int main(){
+//     int a = 10;
+//     int b = 20;
+//     printf("Two given numbers are: %d and %d\n",a,b);
+//     a = a+b;   //30
+//     b = a-b ;  //-10
+//     a = a-b;   // 30-20 = 10 = b
+//     printf("Swapped numbers are: %d and %d",a,b);
+//     return 0;
+// }
+
+
+
+
+
