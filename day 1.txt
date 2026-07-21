@@ -524,6 +524,281 @@ flow of execution is top down approach.
 
 //4. create a simple calculator using +,-,*,/ based on user choice.
 
+/* //write a pogram to check whether a given number is even or odd withoput using mod operator. (using bitwise operator)
+
+#include<stdio.h>
+int main(){
+    int num = 0;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    if(num&1){
+        printf("Given number '%d' is odd", num);
+    }else{
+        printf("Given number '%d' is even", num);
+    }
+    return 0;
+}
+
+
+//write the program to print grade of a student based on marks entered by users. 
+grade  marks greater than or equal to       less than or equal to
+A                       90                          100
+B                       80                          90
+C                       70                          80
+D                       60                          70
+F                      less than 60
+
+
+
+#include<stdio.h>
+int main(){
+    int marks = 0;
+    printf("Enter your marks: ");
+    scanf("%d",&marks);
+    if(marks>=90 & marks<=100){
+        printf("Grade 'A'\n");
+    }
+    else if(marks<90 & marks>=80){
+        printf("Grade 'B'\n");
+    }
+    else if(marks<80 & marks>=70){
+        printf("Grade 'C'\n");
+    }
+    else if(marks<700 & marks>=60){
+        printf("Grade 'D'\n");
+    }
+    else{
+        printf("Grade 'F'\n");
+    }
+    return 0;
+}
+
+
+//switch statements:
+//Problem: Write a program to check whether an alphabet character entered by the user is a vowel or a consonant.
+#include<stdio.h>
+int main(){
+    char alphabet;
+    printf("Enter the alphabet: ");
+    scanf("%c",&alphabet);
+    switch(alphabet){
+        case 'A':
+        case 'a': printf("Vowel");
+        break;
+        case 'E':
+        case 'e': printf("Vowel");
+        break;
+        case 'I':
+        case 'i' : printf("Vowel");
+        break;
+        case 'O':
+        case 'o': printf("Vowel");
+        break;
+        case 'U':
+        case 'u': printf("Vowel");
+        break;
+        default: printf("Consonant");
+        return 0;
+    }
+}
+
+simple calculator using switch
+#include<stdio.h>
+int main(){
+ char operator;
+ int num1;
+ int num2;
+ printf("Enter the operator: ");
+    scanf("%c",&operator);
+printf("Enter num1: ");
+    scanf("%d",&num1);
+printf("Enter the num2: ");
+    scanf("%d",&num2);
+    switch(operator){
+        case '+': printf("Adding given two numbers: %d%d",num1+num2);
+                 break;
+        case '-': printf("subtracting given two numbers: %d%d",num1-num2);
+                 break;
+        case '*': printf("Multiplying given two numbers: %d%d",num1*num2);
+                 break;
+        case '/': printf("Dividing given two numbers: %d%d",num1/num2);
+                 break;
+        default: printf("Invalid operator");
+    } 
+    return 0;
+}
+
+// grading system  
+
+
+/* 
+#include<stdio.h>
+int main(){
+    int marks;
+    printf("Enter your marks: ");
+    scanf("%d",&marks);
+    switch(marks/10){
+        case 10:
+        case 9: 
+        printf("Grade 'A' ");
+        break;
+        case 8: printf("Grade 'B' ");
+        break;
+        case 7: printf("Grade 'C' ");
+        break;
+        case 6: printf("Grade 'C' ");
+        break;
+        default: printf("Grade 'D' ");
+        break;
+    }
+    return 0;
+}
+
+Note: in c programming we have  3 types of contron statements 
+1. Conditional control statements (if, if else,if else if, switch)
+2. Looping control statements     (for, while, do while)
+3. Unconditional contro statements (break, continue)
+
+
+Loops can execute a block of code as long as a specified condition is true.
+In C programming we have 3 looping conditions
+1. for
+2. while
+3. do while
+
+// Print 'Hello world' 5 times                 
+#include<stdio.h>
+int main(){
+    for(int i = 1; i<5;i++){
+    printf("Hello World\n");}
+  return 0;
+}
+
+
+
+// write a  program to print the first 10 natural numbers                
+#include<stdio.h>
+int main(){
+    for(int i = 1; i<=10;i++){
+    printf("%d\n",i);
+     }
+    return 0;
+}
+
+ // write a  program to print  10 to 1
+#include<stdio.h>
+int main(){
+    for(int i = 10; i>=1;i--){
+    printf("%d\n",i);
+     }
+    return 0;
+}                                                                    
+
+ // Write a program to print first 10 even numbers
+#include<stdio.h>
+int main(){
+    for(int i = 2; i<=10;i=i+2){
+    printf("%d\n",i);
+     }
+    return 0;
+}    
+
+  //   Write a program to print odd numbers in the range of 1 to 100
+#include<stdio.h>
+int main(){
+    for(int i = 1; i<=100;i=i+2){
+    printf("%d\n",i);
+     }
+    return 0;
+}    
+
+
+
+
+// Write a program to check whether the given number is prime.
+#include<stdio.h>
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    for(int i = 2; i<=100;i++){
+        i++;
+        if(num%i == 0){
+            printf("Not a prime number");
+        }
+        else{ printf("Prime number");
+     }
+    return 0;
+} 
+}   
+
+
+*/
+
+/*// Write a program to check whether the given number is prime.
+#include<stdio.h>
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    int flag = 0;
+    for(int i = 2; i<=num;i++){
+        flag++;
+        if(num%i == 0){
+            printf("Not a prime number");
+        }
+        else{ printf("Prime number");
+     }
+     if(flag==0){
+        printf("prime number");
+     }
+    return 0;
+} 
+}   
+
+
+// Write a program to find the factorial of a number.
+#include<stdio.h>
+int main(){
+    int num;
+    int fact = 1;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    for(int i = num; i>=1;i--){
+            fact*=i;
+        }
+    printf("%d",fact);
+    return 0;
+}
+
+
+// While Loop: repeats a block of code as long as specified condition is true.
+
+Write a program to print number of digits available in the given number, n = 1234.
+#include<stdio.h>
+int main(){
+    int d =0;
+    int n = 1234;
+    while(n>0){
+        int rem = n%10;
+        d++;
+        n =n/10;
+    }
+    printf("%d",d);
+return 0;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
 
 
 
