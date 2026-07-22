@@ -1126,6 +1126,52 @@ int main(){
 }
 
 
+// String methods
+/*
+1. String length- this iscsued to return number of characters in availabke in string;''
+2. string copy- This method is going to copy one string method to another
+3. string concatenatin: join 2 string
+4. string compare-2 strings where we get ourout i intrger, we get ouput zero. if str2 is 
+thrn kue than zero    
+
+// Create string s1 as "Hello", s2 as hello.
+*/
+#include<stdio.h>
+int main(){
+char str[]="Hello World";
+printf("length:%d\n",strlen(str));
+return 0;
+}
+
+
+//string methods
+// find length of strings
+#include<stdio.h>
+int main(){
+char str[]="Hello World";
+printf("length:%d\n",strlen(str));
+return 0;
+}
+
+// copy strings
+char copy[20];
+strcpy(copy,str1);
+print("copy: %s\n",copy);
+
+// String concatenation
+strcat(str1,str2);
+printf("Concatenated: %s\n",str1);
+
+//compare strings
+printf("compare: %d\n",strcmp("Apple","Apple"));
+return 0;
+
+// string upper or lower case conversion
+strlwr(str1);
+printf("Lowercase: %s\n",str1);
+strupr(str2);
+printf("Uppercase: %s\n",str2);
+
 
 
 
