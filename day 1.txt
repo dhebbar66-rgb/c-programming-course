@@ -1172,6 +1172,423 @@ printf("Lowercase: %s\n",str1);
 strupr(str2);
 printf("Uppercase: %s\n",str2);
 
+/* Pointers
+data type *ptr =&a; 
+#include<stdio.h>
+int main(){
+   int age = 10;
+   //Pointers
+   int*ptr = &age;
+   printf("%p\n",ptr);
+   int *ptr1 =&age;
+   printf("%p\n",ptr1);
+   printf("%d",*ptr);   //actual value
+   return 0;
+}
+ // Note:
+//  To access address of a variable we use address of operator.(&)
+// write a program to declare and initialize integers and char data type variables where values are 2,Z 
+// and create 2 pointers and check size of both the pointers.         
+#include<stdio.h>
+int main(){
+    int x = 2;
+    char y = 'Z';
+    int *x1=&x;
+    printf("size of integer pointer %d\n",x,sizeof(x1));
+    char *y1 =&y;
+    printf("size of character pointer %d",y,sizeof(y1));
+    return 0;
+}
+
+// Write a program swap 2 numbers with the help of pointers
+#include<stdio.h>
+int main(){
+    int a =10;
+    
+
+return 0;
+}
+// Read 2 integers from users,store respective address inside opointers and print sum of those two numbers.
+
+
+// Find larger number using pointers, read two integers, create pointers for both variables, compare values using pointers, 
+//print larger numbers                              
+#include<stdio.h>
+int main(){
+    int a,b;
+    int *a1 = &a;
+    int *b1 = &b;
+    printf("Enter 2 integer values: \n");
+    scanf("%d%d",&a,&b);
+    int res = *a1+*b1;
+    printf("Sum = %d\n",res);
+    if(*a1>*b1){
+        printf("%d is greater\n",*a1);
+    }
+    else if(*b1>*a1){
+        printf("%d is greater \n",*b1);
+        
+    }
+    else{
+        printf("Both numbers are equal.\n");
+    }
+    
+    return 0;
+}
+
+
+// File handling
+#include<stdio.h>
+int main(){
+    FILE *ptr;
+    ptr =fopen("text.txt","w");
+    printf("File Created\n");
+    fprintf(ptr,"Hello World");
+    return 0;
+}                                                             */
+// w to rewrite, a to append to the existing file.r to read the content.
+#include<stdio.h>
+int main(){
+    FILE *ptr;
+    char str[100];
+    ptr = fopen("text.txt","r");
+    if (ptr==NULL)
+    {
+        printf("File does not exist.\n");
+        return 1;
+    }
+    fgets(str,sizeof(str),ptr);
+    printf("content: %s",str);
+    fclose(ptr);
+    return 0;
+}
+     */
+   
+/* User defined data type.
+Group of several related variables named into a same space  and name.
+Each variable available inside structure is known as member.
+STRUCTURE(struct)
+syntax:
+struct structure-name
+{
+    member1;
+    member2;
+};
+
+
+#include<stdio.h>
+int main(){
+struct Employee{
+    char name[10];
+    int id;
+    char dept[20];
+};
+struct Employee e1;   // creation of variable
+e1.id =10;
+printf("Employee id: %d\n",e1.id);
+strcpy(e1.dept,"software");
+printf("Department: %s\n", e1.dept);
+return 0;
+}
+
+//method2 (error)
+#include<stdio.h>
+int main(){
+struct Employee{
+    char name[10];
+    int id;
+    char dept[20];
+
+struct Employee e1 ={"Alice",2,"Admin"};
+printf("Employee id: %d\n",e1.id);
+printf("Department: %s\n", e1.dept);
+return 0;
+}
+}                 
+
+// Create a structure named book with following members. book id(int),book name(char array), author name(char array), price(float)
+
+#include<stdio.h>
+
+struct book{
+    int id;
+    char name[20];
+    char author[20];
+    float price;
+};
+int main(){
+struct book b1 ={2003,"me with me","Saps",22300};
+printf("Book id: %d\n",b1.id);
+printf("Name of the book: %s\n", b1.name);
+printf("Author : %s\n", b1.author);
+printf("Price : %f\n", b1.price);
+printf("\n%d",sizeof(b1));
+return 0;
+}
+
+// structure pading is the extra memory compilor adds between structure members (and sometimes in end).
+// To allign data in memory for faster access
+// The compilor does not choose one specific data type for pading. Instead it considers the allignment requirements of the next members.
+// The overall structure size is also padded to be a multiple of larger allignment requirements among its members.
+
+
+// Unions: it is similar to structure in that it can store mebers of different data types however
+// in a structure each member has its own memory, in a union all members share the same memory which means you can store
+// and use one value at a time
+
+#include<stdio.h>
+
+union book{
+    int id;
+    char name[20];
+    char author[20];
+    float price;
+};
+int main(){
+union book b1 ={.price =22300};
+printf("Price : %f\n", b1.price);
+printf("\n%d",sizeof(b1));
+return 0;
+
+}
+*/
+
+/* Functions
+
+#include<stdio.h>
+int add()  // called function
+{
+printf("%d\n",2+3);
+printf("Add function\n");
+return 0;
+}
+int main(){
+    printf("main method\n");
+    add();   // callinf function
+return 0;
+}            
+
+
+// parameters: If you want to pass any kind of information to specified function we are going to pass it through parameters
+// parameters are specified after the function name and inside the paranthesis.you can add as many parameters as you want.
+// but you have to specify a space seperated operators after each parameter or with comma seperator.
+// syntax:
+// return Type function name(parameter1, parameter2,....){
+//        //code to be executed }
+
+// 1. Write a function to print numbers from 1 to 10.
+#include<stdio.h>
+int printnum()
+{
+    for(int i=1;i<=10;i++){
+      printf("%d\n",i);
+    }
+    
+}
+int main()
+{
+    printnum();
+    return 0;
+}
+
+// Write a function to print factorial of number.
+
+int fact()
+{
+    int f=1;
+    for(int i=1; i<=5;i++)
+    {
+        f*=i;
+    }
+    return f;
+}
+int main()
+{
+    printf("%d",fact());
+    return 0;
+}
+
+
+// write a function to print largest of 3 numbers with the help of parametrized function where read the enducer inputs from main.
+#include<stdio.h>
+int greatest(int n1,int n2,int n3)
+{
+ int greatest = 0;
+  if(n1>n2 && n1>n3)
+  {
+    greatest=n1;
+  }
+  else if(n2>n1 && n2>n3)
+  {
+    greatest=n2;
+  }
+  else{
+    greatest=n3;
+  }
+  return greatest;
+}
+int main(){
+    int a,b,c;
+    printf("Enter 3 integer numbers: \n");
+    scanf("%d%d%d",&a,&b,&c);
+    printf("Greatest number is %d",greatest(a,b,c));
+    return 0;
+}
+
+*/
+
+// write a function to check palindrome
+
+#include<stdio.h>
+char palindrome(a,b)
+{
+    char a ="";
+    char b="";
+    if(a==b)
+    {
+        palindrome = a;
+    }
+    return a;
+}
+int main(){
+ printf("Enter a word: ");
+ scanf("%c\n",)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
