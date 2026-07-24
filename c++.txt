@@ -1,0 +1,370 @@
+/* #include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Hello World\n";
+    cout<<"It's Dhatri\n";
+    cout<<"Dhatri\n";
+    cout<<"Dhatri\n";
+    cout<<"Dhatri\n";
+    cout<<"Dhatri";
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    string name;
+    cout<<"Enter your name: ";
+    cin>>name;
+    cout<<"Hello!! "<<name;
+    return 0;
+}
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    string name;
+    cout<<"Enter first name: ";
+    getline(cin,name);
+    cout<<"Hello "<<name<<endl;
+    return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int age = 20;
+    float marks = 85.5;
+    double salary = 45000.75;
+    char grade = 'A';
+    bool result = true;
+    cout<<age<<endl;
+    cout<<marks<<endl;
+    cout<<salary<<endl;
+    return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=10;
+    int b =5;
+    cout<<"Addition="<<a+b<<endl;
+    cout<<"Subtraction="<<a-b<<endl;
+    cout<<"Multiplication="<<a*b<<endl;
+    cout<<"Division="<<a/b<<endl;
+    return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=10;
+    int b =20;
+    cout<<(a<b)<<endl;
+    cout<<(a>b)<<endl;
+    cout<<(a==b)<<endl;
+    return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int age=25;
+    if(age>18 &&age<60)
+    {
+    cout<<"Eligible";
+    }
+    
+    return 0;
+}
+*/
+#include<iostream>
+using namespace std;
+int main()
+{ 
+    int choice;
+    cin>>choice;
+    switch(choice)
+    {
+        case1:
+        cout<<"Monday";
+        break;
+        case2:
+        cout<<"Tuesday";
+        break;
+        default:
+        cout<<"Invalid";
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Hello World\n";
+    cout<<"It's Dhatri\n";
+    cout<<"Dhatri\n";
+    cout<<"Dhatri\n";
+    cout<<"Dhatri\n";
+    cout<<"Dhatri";
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    string name;
+    cout<<"Enter your name: ";
+    cin>>name;
+    cout<<"Hello!! "<<name;
+    return 0;
+}
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    string name;
+    cout<<"Enter first name: ";
+    getline(cin,name);
+    cout<<"Hello "<<name<<endl;
+    return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int age = 20;
+    float marks = 85.5;
+    double salary = 45000.75;
+    char grade = 'A';
+    bool result = true;
+    cout<<age<<endl;
+    cout<<marks<<endl;
+    cout<<salary<<endl;
+    return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=10;
+    int b =5;
+    cout<<"Addition="<<a+b<<endl;
+    cout<<"Subtraction="<<a-b<<endl;
+    cout<<"Multiplication="<<a*b<<endl;
+    cout<<"Division="<<a/b<<endl;
+    return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=10;
+    int b =20;
+    cout<<(a<b)<<endl;
+    cout<<(a>b)<<endl;
+    cout<<(a==b)<<endl;
+    return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int age=25;
+    if(age>18 &&age<60)
+    {
+    cout<<"Eligible";
+    }
+    
+    return 0;
+}
+*/
+#include<iostream>
+using namespace std;
+int main()
+{ 
+    int choice;
+    cin>>choice;
+    switch(choice)
+    {
+        case1:
+        cout<<"Monday";
+        break;
+        case2:
+        cout<<"Tuesday";
+        break;
+        default:
+        cout<<"Invalid";
+    }
+    return 0;
+}
+
+// #include<iostream>
+// using namespace std;
+// int add(int a,int b)
+// {
+//     return a+b;
+// }
+// float add(float a,float b)
+// {
+//     return a+b;
+// }
+// int main()
+// {
+//     cout<<add(10,20)<<endl;
+//     cout<<add(5.5f,4.5f);
+//     return 0;
+// }
+
+
+//Function overloading: no both same function
+#include<iostream>
+using namespace std;
+int add(int a,int b)
+{
+    return a+b;
+}
+int add(int a,int b)
+{
+    return a+b;
+}
+int main()
+{
+    cout<<add(10,20)<<endl;
+    cout<<add(5,5);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
